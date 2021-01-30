@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Test {
 
 	public static void main(String[] args) throws IOException {
-		File f = new File("new_passwords.txt");
+		File f = new File("src\\project1\\new_passwords.txt");
 		Scanner sc = new Scanner(f);
 		String[] passwords = new String[2798];
 		int i = 0;
@@ -33,7 +33,7 @@ public class Test {
 	}
 	private static void gen_passwords_to_new_file() {
 		String[] pass = get_passwords();
-		File f = new File("new_passwords");
+		File f = new File("src\\project1\\new_passwords");
 		FileWriter fw;
 		try {
 			fw = new FileWriter(f);
@@ -70,6 +70,7 @@ public class Test {
 		return uncommon_passwords;
 		
 	}
+
 	public static String generate_string() {
 	    int leftLimit = 48; // numeral '0'
 	    int rightLimit = 122; // letter 'z'
