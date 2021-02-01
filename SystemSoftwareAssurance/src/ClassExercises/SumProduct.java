@@ -1,3 +1,4 @@
+package ClassExercises;
 import java.util.Scanner;
 
 public class SumProduct {
