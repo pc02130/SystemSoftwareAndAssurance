@@ -9,8 +9,9 @@ public class PrimeFactorization {
 	public static void main(String[] args) {
 		if (args.length > 0) {		
 			try {
-				int x = Integer.parseInt(args[0]);
-				ArrayList<Integer> facts = factorization(x);
+				long x = Long.parseLong(args[0]);
+				ArrayList<Long> facts = factorization(x);
+				
 				System.out.print(x + "=");
 				for(int i = 0; i < facts.size(); i++) {
 					if (i + 1 == facts.size()) {
@@ -31,9 +32,14 @@ public class PrimeFactorization {
 			System.exit(0);
 		}	
 	}
-	public static ArrayList<Integer> factorization(int num) {
-		ArrayList<Integer> facts = new ArrayList<Integer>();
-		for(int i = 2; i <= num; i++) {
+	public static ArrayList<Long> factorization(long num) {
+		ArrayList<Long> facts = new ArrayList<Long>();
+		
+		for(long i = 2; i <= num; i++) {
+			if (i * i > x) {
+				facts.add(x);
+				break;
+			}
 			while (num % i == 0) {
 				facts.add(i);
 				num /= i; 
