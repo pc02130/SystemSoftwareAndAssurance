@@ -8,6 +8,8 @@ public class MyNK {
 	
 	static List<ArrayList<Integer>> combinations = new ArrayList<ArrayList<Integer>>();
 	
+	
+	// Brute force method- Extremely slow with larger input sizes since we're adding so many combinations to the ArrayList, then deleting them.
     public static void helper(int arr[], int data[], int start, int end, int index, int k) {
     	
         if (index == k) {
@@ -36,7 +38,11 @@ public class MyNK {
     }
  
     public static void main (String[] args) {
-        
+        if (args.length < 3) {
+        	System.out.println("Enter N and K as cmd arguments.");
+        	
+        }
+        System.out.println(args.length);
         int k = 9;
         int n = 9;
         int[] arr = new int[n];
@@ -76,39 +82,3 @@ public class MyNK {
     	}  
     }
 }
- 
-
-// formula =		n! / ((n-k)! * k!)
-
-/*
- * n = 4; k = 4
- *	1122
- *	1123
- *	1124
- *	1223
- *	1224
- *	1233
- *	1234
- *	1331
- *	1334
- *	2233
- *	2234
- *	32
- *
- * n = 5; k = 4
- * 	1122
- * 	1123
- * 	1124
- * 	1125
- * 	1223
- * 	1224
- * 	1225
- * 	1331
- * 	1334
- * 	1335
- * 	1
- * 
- * 
- * 
- * 
- */
